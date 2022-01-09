@@ -1,5 +1,6 @@
 # vars file
 ---
+r_install_version: "{{ r_project_version | default('4.1.2') }}"
 r_repository_suffix: "{{ '-cran' + r_version if r_version is version('35', '>=') else '' }}"
 r_repository:
   - type: deb
